@@ -26,7 +26,6 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
         /* Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
@@ -37,7 +36,6 @@ $(function() {
                 expect(feed.url).not.toBe('');
             }
         });
-
 
         /* Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
@@ -51,7 +49,6 @@ $(function() {
         })
 
     });
-
 
     /* Write a new test suite named "The menu" */
     describe('The menu', function() {
@@ -80,15 +77,15 @@ $(function() {
         });
     });
 
-
-    /* TODO: Write a new test suite named "Initial Entries" */
-
+    /* Write a new test suite named "Initial Entries" */
+    describe('Initial Entries', function() {
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
