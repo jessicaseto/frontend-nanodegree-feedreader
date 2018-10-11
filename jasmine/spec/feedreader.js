@@ -69,7 +69,7 @@ $(function() {
         it('changes visibility when the menu icon is clicked', function() {
             // First click shows the menu
             $('.menu-icon-link').click();
-            expect($('body')[0].classList.length).toBe(0);
+            expect($('body').hasClass('menu-hidden')).not.toBe(true);
 
             // Second click hides the menu
             $('.menu-icon-link').click();
