@@ -93,7 +93,7 @@ $(function() {
         });
 
         it('after loadFeed is called, there is at least one entry in the feed', function(done) {
-            expect($('.feed')[0].children.length).toBeGreaterThan(0);
+            expect($('.feed .entry-link').length).toBeGreaterThan(0);
             done();
         });
     });
