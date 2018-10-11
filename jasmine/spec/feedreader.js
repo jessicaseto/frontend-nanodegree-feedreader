@@ -112,19 +112,16 @@ $(function() {
         beforeEach(function(done) {
             // Load a feed, running loadFeed() to completion
             loadFeed(0, function() {
-                done();
+                // save the first feed
+                oldFeed = $('.feed').html();
+
+                // Load a different feed, running loadFeed() to completion
+                loadFeed(1, function() {
+                    // save the second feed
+                    newFeed = $('.feed').html();
+                    done();
+                });
             });
-
-            // save the first feed
-            oldFeed = $('.feed');
-
-            // Load a different feed, running loadFeed() to completion
-            loadFeed(1, function() {
-                done();
-            });
-
-            // save the second feed
-            newFeed = $('.feed');
         });
 
         it('when a new feed is loaded, the content changes', function() {
