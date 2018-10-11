@@ -58,7 +58,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
         it('is hidden by default', function() {
-            expect(document.body.classList).toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
          /* Write a test that ensures the menu changes
@@ -69,11 +69,11 @@ $(function() {
         it('changes visibility when the menu icon is clicked', function() {
             // First click shows the menu
             $('.menu-icon-link').click();
-            expect(document.body.classList.length).toBe(0);
+            expect($('body')[0].classList.length).toBe(0);
 
             // Second click hides the menu
             $('.menu-icon-link').click();
-            expect(document.body.classList).toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
     });
 
